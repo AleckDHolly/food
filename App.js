@@ -7,8 +7,12 @@ const Stack = createNativeStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Business Search" component={SearchScreen} />
+      <Stack.Navigator initialRouteName="Business Search">
+        <Stack.Screen
+          name="Business Search"
+          component={SearchScreen}
+          options={{ headerTitleAlign: "center" }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
